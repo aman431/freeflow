@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "5px",
   },
 }));
-const Livecard = ({ basecard, cardname, Picture, ImgData, colorHexCode }) => {
+const Livecard = ({ Picture, ImgData, colorHexCode, state }) => {
   const classes = useStyles();
   return (
     <Box className={classes.root}>
@@ -36,9 +36,15 @@ const Livecard = ({ basecard, cardname, Picture, ImgData, colorHexCode }) => {
       >
         {Picture ? (
           <Avatar alt="Remy Sharp" src={ImgData} className={classes.Avatar} />
-        ) : null}
-        <p className={classes.name}>Brand Name {basecard}</p>
-        <p className={classes.name}>Card Name {cardname}</p>
+        ) : (
+          <Avatar
+            alt="Remy Sharp"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3gOqG9WdfCMoKW8RRkG6_Fo-H9ZGTYyl_1A&usqp=CAU"
+            className={classes.Avatar}
+          />
+        )}
+        <p className={classes.name}>Brand Name {state.basecard}</p>
+        <p className={classes.name}>Card Name {state.cardname}</p>
         <br />
       </Card>
     </Box>

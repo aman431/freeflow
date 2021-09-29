@@ -25,29 +25,46 @@ const useStyles = makeStyles((theme) => ({
 
 function Body() {
   const classes = useStyles();
-  const [basecard, setbasecard] = useState("");
-  const [cardname, setcardname] = useState("");
+  const initialState = {
+    cardname: "",
+    basecard: "",
+    fromwhere: "",
+  };
+  const [state, setState] = useState(initialState);
   const [Picture, setPicture] = useState();
   const [ImgData, setImgData] = useState();
   const [colorHexCode, setColorHexCode] = useState("#000000");
 
+  const handleChange = (e, fromwhere) => {
+    if (e.target.value.length <= 10) {
+      setState({
+        ...state,
+        [e.target.name]: e.target.value,
+        fromwhere: "",
+      });
+    } else {
+      setState({
+        ...state,
+        fromwhere: fromwhere,
+      });
+    }
+  };
   return (
     <div className={classes.mainBody}>
       <div className={classes.Input}>
         <Form
-          setbasecard={setbasecard}
-          setcardname={setcardname}
+          handleChange={handleChange}
           setPicture={setPicture}
           setImgData={setImgData}
           setColorHexCode={setColorHexCode}
           colorHexCode={colorHexCode}
+          state={state}
         />
       </div>
       <div className={classes.border}></div>
       <div className={classes.Card}>
         <Livecard
-          basecard={basecard}
-          cardname={cardname}
+          state={state}
           Picture={Picture}
           ImgData={ImgData}
           colorHexCode={colorHexCode}

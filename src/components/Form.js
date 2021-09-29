@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/styles";
+import { FormHelperText } from "@material-ui/core";
 import React, { useState } from "react";
 import { SketchPicker } from "react-color";
-// import ColorPicker from "react-color-picker";
 
 const useStyles = makeStyles((theme) => ({
   fields: {
@@ -10,15 +10,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const Form = ({
-  setbasecard,
-  setcardname,
+  handleChange,
   setPicture,
   setImgData,
   setColorHexCode,
   colorHexCode,
+  state,
+  error,
 }) => {
   const classes = useStyles();
-
+  const [showpicker, setshowpicker] = useState(Boolean);
   const handleonclick = () => {
     document.getElementById("typefile").click();
   };
@@ -33,17 +34,48 @@ const Form = ({
       reader.readAsDataURL(e.target.files[0]);
     }
   };
+  const handleshowpicker = () => {
+    if (showpicker) {
+      setshowpicker(false);
+    } else {
+      setshowpicker(true);
+    }
+  };
   return (
     <div className={classes.fields}>
       <input
+        name="basecard"
+        value={state.basecard}
         placeholder="BaseCard"
-        onChange={(e) => setbasecard(e.target.value)}
+        onChange={(e) => {
+          handleChange(e, "frombrandcard");
+        }}
       />
-      <input placeholder="Card" onChange={(e) => setcardname(e.target.value)} />
-      <SketchPicker
-        color={colorHexCode}
-        onChange={(e) => setColorHexCode(e.hex)}
+      {state.fromwhere === "frombrandcard" && (
+        <FormHelperText error style={{ fontSize: "12px" }}>
+          Limit is exced
+        </FormHelperText>
+      )}
+      <input
+        name="cardname"
+        value={state.cardname}
+        placeholder="Card"
+        onChange={(e) => handleChange(e, "fromcardname")}
       />
+      {state.fromwhere === "fromcardname" && (
+        <FormHelperText error style={{ fontSize: "12px" }}>
+          Limit is exced
+        </FormHelperText>
+      )}
+      <button onClick={handleshowpicker}>
+        {showpicker ? "Close" : "Show"} Color Picker
+      </button>
+      {showpicker && (
+        <SketchPicker
+          color={colorHexCode}
+          onChange={(e) => setColorHexCode(e.hex)}
+        />
+      )}
       <button onClick={handleonclick}>Upload File</button>
       <input
         id="typefile"
