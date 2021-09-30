@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
     height: "90%",
     width: "1px",
     backgroundColor: "#565252",
-    // marginRight: "102px",
     marginTop: "31px",
   },
   Card: {
@@ -31,11 +30,15 @@ const useStyles = makeStyles((theme) => ({
 
 function Body() {
   const classes = useStyles();
+
+  // initialstate
   const initialState = {
     cardname: "",
     basecard: "",
     fromwhere: "",
   };
+
+  // dispatch action on redux
   const dispatch = useDispatch<Dispatch<AppActions>>();
   const [state, setState] = useState(initialState);
   const [Picture, setPicture] = useState();
@@ -73,6 +76,7 @@ function Body() {
   return (
     <div className={classes.mainBody}>
       <div className="InputBoxForm">
+        {/* Show forms */}
         <Form
           handleChange={handleChange}
           setPicture={setPicture}
@@ -85,12 +89,14 @@ function Body() {
       </div>
       <div className={classes.border}></div>
       <div>
+        {/* live card */}
         <Livecard
           state={state}
           Picture={Picture}
           ImgData={ImgData}
           colorHexCode={colorHexCode}
         />
+        {/* Afer hit to the submit button */}
         <Aftersubmit />
       </div>
     </div>

@@ -1,3 +1,5 @@
+/** Make a common file for color picker */
+
 import React, { FC } from "react";
 import { SketchPicker } from "react-color";
 import "../App.css";

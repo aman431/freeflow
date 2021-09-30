@@ -1,7 +1,7 @@
-import React, { FC, useEffect, useState } from "react";
-// import { makeStyles } from "@material-ui/core";
-import { Avatar, Card, Box, makeStyles } from "@material-ui/core";
-import { useDispatch, useSelector } from "react-redux";
+/** Setup redux and call the data from the redux */
+
+import { Avatar, Card, makeStyles } from "@material-ui/core";
+import { useSelector } from "react-redux";
 import { AppState } from "../redux/reducer/appReducer";
 
 const useStyles = makeStyles(() => ({
@@ -48,7 +48,6 @@ const Aftersubmit = () => {
 
   return (
     <>
-      {console.log("usercard", userCard)}
       {Object.keys(userCard).length !== 0 && (
         <Card
           className={classes.displaycard}
@@ -80,21 +79,3 @@ const Aftersubmit = () => {
   );
 };
 export default Aftersubmit;
-
-// import React from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import { AppState } from "../redux/reducer/appReducer";
-
-// const Aftersubmit = () => {
-//   const { userCard } = useSelector<{ app: AppState }, AppState>(
-//     (state) => state.app
-//   );
-
-//   return (
-//     <div>
-//       <div> {console.log("userCard", userCard)}</div>
-//     </div>
-//   );
-// };
-
-// export default Aftersubmit;

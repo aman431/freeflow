@@ -30,7 +30,7 @@
   float: left;
   width: 100%;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .mainBody {
   float: right;
@@ -54,7 +54,7 @@
   margin-bottom: 8px;
 }
 .button {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   padding: 10px;
   border: none;
   border-radius: 5px;
