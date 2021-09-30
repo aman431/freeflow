@@ -58,6 +58,7 @@ const Form: FC<IProps> = ({
     >
       <input
         name="basecard"
+        className="input"
         value={state.basecard}
         placeholder="BaseCard"
         onChange={(e) => {
@@ -71,6 +72,7 @@ const Form: FC<IProps> = ({
       )}
       <input
         name="cardname"
+        className="input"
         value={state.cardname}
         placeholder="Card"
         onChange={(e) => handleChange(e, "fromcardname")}
@@ -98,7 +100,7 @@ const Form: FC<IProps> = ({
           onChange={handlecolorpicker}
         />
       </div> */}
-      <button onClick={handleonclick} style={{ marginBottom: "10px" }}>
+      <button onClick={handleonclick} className="button">
         Upload File
       </button>
       <input
@@ -107,7 +109,9 @@ const Form: FC<IProps> = ({
         onChange={handleonchange}
         style={{ display: "none" }}
       />
-      <button onClick={handleonSubmit}>On Submit</button>
+      <button className="button" onClick={handleonSubmit}>
+        On Submit
+      </button>
     </div>
   );
 };

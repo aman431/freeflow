@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { SketchPicker } from "react-color";
+import "../App.css";
 
 type IProps = {
   onClick: () => void;
@@ -22,7 +23,7 @@ const showcolorpicker: FC<IProps> = ({
 
   return (
     <>
-      <button onClick={onClick}>
+      <button onClick={onClick} className="button">
         {showpicker ? "Close" : "Show"} {label}
       </button>
       {showpicker && (

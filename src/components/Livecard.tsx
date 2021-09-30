@@ -4,12 +4,14 @@ import { Avatar, Card, Box, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
   root: {
-    float: "left",
+    // float: "left",
     width: "300px",
     border: "none",
     background: "rgba(180, 215, 251, 0.5)",
     boxSizing: "border-box",
     padding: "10px 5px",
+    marginTop: "-40%",
+    marginBottom: "20px",
   },
   displaycard: {
     width: "92%",
