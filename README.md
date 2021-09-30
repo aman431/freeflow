@@ -43,3 +43,6 @@ And on other hand we have created a Live card. whatever thing you have updated f
 ## comment section 
 As i have more focused on the functionality part because in the less time i have to show my skill as i want to be. I have created a UI but more i have focused on the code 
 structure, logic implementation, code flow, props handling, redux, comment section and make a common component which make a help to easy to use and much more thing...!
+
+## Extra 
+One thing i have to point here Live Card Design and After Submit Design i have kept same purposly because Over there i just want to show the redux performance and redux data. As mentioned in the assignment.
