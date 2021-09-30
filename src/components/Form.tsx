@@ -89,7 +89,7 @@ const Form: FC<IProps> = ({
           onChange={handlecolorpicker}
         />
       </div>
-      <div className="colorPickerNew">
+      {/* <div className="colorPickerNew">
         <Showcolorpicker
           onClick={handleshowpicker}
           showpicker={showpicker}
@@ -97,7 +97,7 @@ const Form: FC<IProps> = ({
           colorHexCode={colorHexCode}
           onChange={handlecolorpicker}
         />
-      </div>
+      </div> */}
       <button onClick={handleonclick} style={{ marginBottom: "10px" }}>
         Upload File
       </button>
