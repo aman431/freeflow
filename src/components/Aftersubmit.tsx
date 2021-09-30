@@ -26,7 +26,6 @@ const useStyles = makeStyles(() => ({
     marginLeft: "5px",
     margin: "10px 0px 5px 5px",
     fontSize: "19px",
-    // fontWeight: "600",
   },
   cardAvatar: {
     margin: "4px 0px 0px 5px",

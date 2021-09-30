@@ -65,7 +65,7 @@ const Form: FC<IProps> = ({
 
     // loop a string and check a data by special character if index exist then open alert
     for (var i = 0; i < data.length; i++) {
-      if (iChars.indexOf(data.charAt(i)) != -1) {
+      if (iChars.indexOf(data.charAt(i)) !== -1) {
         alert("Your string has special characters. \nThese are not allowed.");
         const data: any = document.getElementById(id)!;
         data.value = ""; // send a empty if exist
@@ -129,7 +129,7 @@ const Form: FC<IProps> = ({
         style={{ display: "none" }}
       />
       <button className="button" onClick={handleonSubmit}>
-        On Submit
+        Submit
       </button>
     </div>
   );
