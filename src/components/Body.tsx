@@ -1,3 +1,5 @@
+/** Body of the application */
+
 import { makeStyles } from "@material-ui/core/styles";
 import { useState } from "react";
 import Form from "./Form";
@@ -45,6 +47,7 @@ function Body() {
   const [ImgData, setImgData] = useState();
   const [colorHexCode, setColorHexCode] = useState("#000000");
 
+  // update state on change
   const handleChange = (e: any, fromwhere: string) => {
     if (e.target.value.length <= 10) {
       setState({
@@ -60,6 +63,7 @@ function Body() {
     }
   };
 
+  // handle on submit
   const handleonSubmit = () => {
     const userdata = {
       brandname: state.basecard,
@@ -67,6 +71,8 @@ function Body() {
       image: ImgData,
       colorpicker: colorHexCode,
     };
+
+    // dispatch action on reducers with action type
     dispatch({
       type: AppActionType.setusercard,
       payload: userdata,

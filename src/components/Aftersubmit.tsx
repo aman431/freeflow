@@ -47,6 +47,7 @@ const Aftersubmit = () => {
 
   return (
     <>
+      {/* Check if your object should not be a empty */}
       {Object.keys(userCard).length !== 0 && (
         <Card
           className={classes.displaycard}
@@ -69,6 +70,7 @@ const Aftersubmit = () => {
               className={classes.cardAvatar}
             />
           )}
+          {/* Show brand name and card name */}
           <p className={classes.cardname}>Brand Name {userCard.brandname}</p>
           <p className={classes.namepass}>Card Name {userCard.cardname}</p>
           <br />

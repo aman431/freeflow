@@ -1,10 +1,10 @@
+/** Live Card update */
+
 import React, { FC } from "react";
-// import { makeStyles } from "@material-ui/core";
 import { Avatar, Card, Box, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
   root: {
-    // float: "left",
     width: "300px",
     border: "none",
     background: "rgba(180, 215, 251, 0.5)",
@@ -51,12 +51,14 @@ const Livecard: FC<IProps> = ({ Picture, ImgData, colorHexCode, state }) => {
 
   return (
     <Box className={classes.root}>
+      {/* Card */}
       <Card
         className={classes.displaycard}
         style={{
           background: colorHexCode,
         }}
       >
+        {/* Avatar by default Avatar i have sended it */}
         {Picture ? (
           <Avatar
             alt="Remy Sharp"
@@ -70,6 +72,7 @@ const Livecard: FC<IProps> = ({ Picture, ImgData, colorHexCode, state }) => {
             className={classes.cardAvatar}
           />
         )}
+        {/* Brand name and card name */}
         <p className={classes.cardname}>Brand Name {state.basecard}</p>
         <p className={classes.namepass}>Card Name {state.cardname}</p>
         <br />

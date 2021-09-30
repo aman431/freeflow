@@ -82,6 +82,7 @@ const Form: FC<IProps> = ({
       className="fieldsColumn"
       style={{ display: "grid", marginTop: "10px" }}
     >
+      {/* Show board name */}
       <input
         name="basecard"
         id="brandcard"
@@ -92,11 +93,15 @@ const Form: FC<IProps> = ({
           checkvalidation(e, "frombrandcard", "brandcard");
         }}
       />
+
+      {/* Check error character validation limit 10 */}
       {state.fromwhere === "frombrandcard" && (
         <FormHelperText error style={{ fontSize: "12px" }}>
           Limit is exced
         </FormHelperText>
       )}
+
+      {/* Show card name */}
       <input
         name="cardname"
         id="cardname"
@@ -105,11 +110,15 @@ const Form: FC<IProps> = ({
         placeholder="Card"
         onChange={(e) => checkvalidation(e, "fromcardname", "cardname")}
       />
+
+      {/* Check error character validation limit 10 */}
       {state.fromwhere === "fromcardname" && (
         <FormHelperText error style={{ fontSize: "12px" }}>
           Limit is exced
         </FormHelperText>
       )}
+
+      {/* Show color picker */}
       <div className="colorPickerNew">
         <Showcolorpicker
           onClick={handleshowpicker}
@@ -119,6 +128,8 @@ const Form: FC<IProps> = ({
           onChange={handlecolorpicker}
         />
       </div>
+
+      {/* upload file */}
       <button onClick={handleonclick} className="button">
         Upload File
       </button>
@@ -128,6 +139,8 @@ const Form: FC<IProps> = ({
         onChange={handleonchange}
         style={{ display: "none" }}
       />
+
+      {/* On submit */}
       <button className="button" onClick={handleonSubmit}>
         Submit
       </button>
