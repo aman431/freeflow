@@ -1,38 +1,55 @@
-/* .App {
-  text-align: center;
+.mainwrapper {
+  float: left;
+  width: 90%;
+  height: 90%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  box-shadow: 13px 13px 24px 11px #333;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.InputBoxForm {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 50%;
+  float: left;
+  position: relative;
 }
-
-.App-link {
-  color: #61dafb;
+.InputBoxForm::after {
+  content: "";
+  float: left;
+  width: 1px;
+  height: 400px;
+  background-color: #000;
+  position: absolute;
+  right: 40px;
+  top: -110px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+.colorPickerNew {
+  float: left;
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+.mainBody {
+  float: right;
+  width: 73%;
+  min-height: calc(100% - 50px);
+}
+.fieldsColumn {
+  width: 62%;
+  margin: 0 auto;
+}
+.colorPickerNew button {
+  width: 100%;
+}
+.colorPickerNew .sketch-picker {
+  position: absolute;
+  left: 0;
+  bottom: auto;
+}
+.fieldsColumn input {
+  height: 23px;
+  margin-bottom: 8px;
+}
