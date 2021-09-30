@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Free Flow Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction 
 
-## Available Scripts
+we have created a simple demo application where at one side we are providing a different input field like brand name, card name, color picker, upload file and submit.
+And on other hand we have created a Live card. whatever thing you have updated from this input field it will reflect on other side of the live card. And after hit to the submit button actual card is created by using the redux data...!
 
-In the project directory, you can run:
+## Technology used 
 
-### `yarn start`
+1. Typescript 
+2. React js 
+3. Redux
+4. Javascript 
+5. Material UI 
+6. color picker 
+7. Html
+8. CSS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Functionality Performed 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Provided Brand name. 
+2. Provided Card name.
+3. Provide Image(If user doesn't set any image automatic one default image i have set there).
+4. Choose Primary Color.
+5. Upload file.
+6. Provided Validation if you enter More than 10 Character. 
+7. Provided validation if you provided any special character in the input text field. 
+8. Maintain a whole redux in Typescript after hit On Submit Button.
 
-### `yarn test`
+## Code Maintainabilty
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Using typescript which is best as a scripting language. 
+2. Using a redux in Typescript. 
+3. Structure of code which is provide easy to understand. 
+5. Make a common component.
+6. Added comment section easy to understand. 
 
-### `yarn build`
+## Server related 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Update a code on github 
+2. live on heroku 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## comment section 
+As i have more focused on the functionality part because in the less time i have to show my skill as i want to be. I have created a UI but more i have focused on the code 
+structure, logic implementation, code flow, props handling, redux, comment section and make a common component which make a help to easy to use and much more thing...!
