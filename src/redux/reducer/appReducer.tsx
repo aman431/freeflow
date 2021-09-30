@@ -1,5 +1,6 @@
 import { createContext } from "react";
 
+// type of data required
 export type SO = {
   name: string;
   brandname: string;
@@ -8,14 +9,17 @@ export type SO = {
   colorpicker: string;
 };
 
+// state
 export type AppState = {
   userCard: SO;
 };
 
-// eslint-disable-next-line no-shadow
+// Action type
 export enum AppActionType {
   setusercard = "setusercard",
 }
+
+//Actions
 export type AppActions = { type: AppActionType.setusercard; payload: any };
 
 //initialState
@@ -23,6 +27,7 @@ const initialState = {
   userCard: {},
 } as AppState;
 
+//create context
 export const AppContext = createContext(initialState);
 
 //maintain a state of Cloud
