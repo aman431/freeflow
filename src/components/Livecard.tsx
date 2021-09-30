@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC } from "react";
 // import { makeStyles } from "@material-ui/core";
 import { Avatar, Card, Box, makeStyles } from "@material-ui/core";
 
@@ -24,7 +24,6 @@ const useStyles = makeStyles(() => ({
     marginLeft: "5px",
     margin: "10px 0px 5px 5px",
     fontSize: "19px",
-    // fontWeight: "600",
   },
   cardAvatar: {
     margin: "4px 0px 0px 5px",
@@ -43,7 +42,6 @@ type IProps = {
   ImgData: object | any;
   colorHexCode: string;
   state: object | any;
-  // setadjustcolor: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const Livecard: FC<IProps> = ({ Picture, ImgData, colorHexCode, state }) => {
