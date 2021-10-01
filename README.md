@@ -1,4 +1,4 @@
-# Free Flow Assignment
+# Free Flow
 
 ## Introduction 
 
@@ -23,9 +23,10 @@ And on other hand we have created a Live card. whatever thing you have updated f
 3. Provide Image(If user doesn't set any image automatic one default image i have set there).
 4. Choose Primary Color.
 5. Upload file.
-6. Provided Validation if you enter More than 10 Character. 
-7. Provided validation if you provided any special character in the input text field. 
-8. Maintain a whole redux in Typescript after hit On Submit Button.
+6. Set a restriction for .jpeg and .png file
+7. Provided Validation if you enter More than 10 Character. 
+8. Provided validation if you provided any special character in the input text field. 
+9. Maintain a whole redux in Typescript after hit On Submit Button.
 
 ## Code Maintainabilty
 
