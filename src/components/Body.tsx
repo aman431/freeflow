@@ -2,13 +2,13 @@
 
 import { makeStyles } from "@material-ui/core/styles";
 import { useState } from "react";
-import Form from "./Form";
-import Livecard from "./Livecard";
 import { AppActions, AppActionType } from "../redux/reducer/appReducer";
 import { useDispatch } from "react-redux";
 import { Dispatch } from "redux";
 import Aftersubmit from "./Aftersubmit";
 import ModalPopup from "../common/ModalPopup";
+import Livecard from "./Livecard";
+import Form from "./Form";
 
 const useStyles = makeStyles((theme) => ({
   border: {
@@ -110,7 +110,7 @@ function Body() {
         />
       )}
       <div className="InputBoxForm">
-        {/* Show forms */}
+        {/* Show Forms */}
         <Form
           handleChange={handleChange}
           setPicture={setPicture}
@@ -121,9 +121,10 @@ function Body() {
           handleonSubmit={handleonSubmit}
         />
       </div>
+      {/* Border */}
       <div className={classes.border}></div>
+      {/* live card */}
       <div className="liveCardBlog">
-        {/* live card */}
         <Livecard
           state={state}
           Picture={Picture}

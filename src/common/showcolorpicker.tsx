@@ -13,20 +13,18 @@ type IProps = {
   onChange: any;
 };
 
-const showcolorpicker: FC<IProps> = ({
-  onClick,
-  showpicker,
-  label,
-  colorHexCode,
-  onChange,
-}) => {
+const showcolorpicker: FC<IProps> = (props) => {
+  // handle props
+  const { onClick, showpicker, label, colorHexCode, onChange, ...others } =
+    props;
+
   // handle on change
   const handleChange = (e: any) => {
     return onChange(e.hex);
   };
 
   return (
-    <>
+    <div {...others}>
       {/* Show and Close according to user action on button */}
       <button onClick={onClick} className="button">
         {showpicker ? "Close" : "Show"} {label}
@@ -36,7 +34,8 @@ const showcolorpicker: FC<IProps> = ({
       {showpicker && (
         <SketchPicker color={colorHexCode} onChange={handleChange} />
       )}
-    </>
+    </div>
   );
 };
+
 export default showcolorpicker;

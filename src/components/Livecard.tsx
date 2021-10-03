@@ -59,7 +59,7 @@ const Livecard: FC<IProps> = ({ Picture, ImgData, colorHexCode, state }) => {
           background: colorHexCode,
         }}
       >
-        {/* Avatar by default Avatar i have sended it */}
+        {/* Avatar by default Avatar */}
         {Picture ? (
           <Avatar
             alt="Remy Sharp"

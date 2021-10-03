@@ -66,7 +66,7 @@ const Aftersubmit = () => {
             // Default image
             <Avatar
               alt="Remy Sharp"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3gOqG9WdfCMoKW8RRkG6_Fo-H9ZGTYyl_1A&usqp=CAU"
+              src="https://www.freeiconspng.com/thumbs/face-icon-png/flat-face-icon-23.png"
               className={classes.cardAvatar}
             />
           )}

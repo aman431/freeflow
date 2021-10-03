@@ -16,6 +16,7 @@ import {
   withStyles,
   WithStyles,
 } from "@material-ui/core/styles";
+import { create } from "domain";
 import React, { ReactNode } from "react";
 
 // Input props
@@ -71,8 +72,14 @@ const DialogTitle = withStyles(styles)((props: DialogTitleProps) => {
   );
 });
 
-// content
-const DialogContent = withStyles((theme: Theme) => ({}))(MuiDialogContent);
+// content we can also provide a styling on body content
+// MuiDialogContent for Modal content...!
+
+// empty styling
+// we can able to provide a style to the body from here
+
+const style = createStyles({});
+const DialogContent = withStyles(style)(MuiDialogContent);
 
 //Main Component Main Modal pop up.
 const ModalPopup = ({
@@ -94,6 +101,7 @@ const ModalPopup = ({
 
   return (
     <div>
+      {/* Dialog Box */}
       <Dialog
         PaperProps={{
           style: { borderRadius: 12, width: "calc(50% - 64px)" },
@@ -105,6 +113,7 @@ const ModalPopup = ({
         maxWidth={size}
         fullWidth
       >
+        {/* Title */}
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
           <h1
             style={{
@@ -115,6 +124,7 @@ const ModalPopup = ({
             {modalTitle}
           </h1>
         </DialogTitle>
+        {/* Main Content */}
         <DialogContent dividers>{modalBody}</DialogContent>
       </Dialog>
     </div>
