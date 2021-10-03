@@ -59,6 +59,7 @@ function Body() {
 
   // handle on submit
   const handleonSubmit = () => {
+    // send userdata after submit
     const userdata = {
       brandname: state.basecard,
       cardname: state.cardname,
@@ -66,6 +67,7 @@ function Body() {
       colorpicker: colorHexCode,
     };
 
+    // show modal
     openModal({
       ...showModalList,
       openModalpopup: true,
@@ -98,6 +100,7 @@ function Body() {
         boxSizing: "border-box",
       }}
     >
+      {/* Live card after submit */}
       {showModalList.openModalpopup && (
         <ModalPopup
           modalTitle="Live Card"
