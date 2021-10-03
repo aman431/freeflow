@@ -75,7 +75,6 @@ const Livecard: FC<IProps> = ({ Picture, ImgData, colorHexCode, state }) => {
         )}
         {/* Brand name and card name */}
         <p className={classes.cardname}>
-          {console.log("Brand name", state.brandname)}
           {state.basecard !== "" ? <>Brand {state.basecard}</> : null}
         </p>
         <p className={classes.namepass}>
