@@ -1,7 +1,5 @@
-import { createContext } from "react";
-
 // type of data required
-export type SO = {
+export type TYPECARD = {
   name: string;
   brandname: string;
   cardname: string;
@@ -11,7 +9,7 @@ export type SO = {
 
 // state
 export type AppState = {
-  userCard: SO;
+  userCard: TYPECARD;
 };
 
 // Action type
@@ -27,10 +25,7 @@ const initialState = {
   userCard: {},
 } as AppState;
 
-//create context
-export const AppContext = createContext(initialState);
-
-//maintain a state of Cloud
+//maintain a state
 const appReducer = (state = initialState, action: AppActions): AppState => {
   switch (action.type) {
     case AppActionType.setusercard:

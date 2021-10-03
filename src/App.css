@@ -48,6 +48,7 @@
   position: absolute;
   left: 0;
   bottom: auto;
+  z-index: 9;
 }
 .fieldsColumn input {
   height: 23px;
@@ -66,8 +67,72 @@
   padding: 0.5rem;
   display: flex;
   justify-content: space-around;
-  /* color: black;
-  width: 85%;
-  border: none;
-  background-color: transparent; */
+}
+.liveCardBlog {
+  float: left;
+  width: 50%;
+}
+/* media css start here */
+
+/* media for laptop width*/
+@media screen and (max-width: 1325px) {
+  .fieldsColumn {
+    margin: initial;
+  }
+  .cardswrapMain {
+    width: 95% !important;
+  }
+}
+
+/* media for 991 tablet */
+@media screen and (max-width: 991px) {
+  .mainwrapper {
+    width: 95%;
+    height: 95%;
+  }
+}
+
+/* media for 840 tablet*/
+@media screen and (max-width: 840px) {
+  .mainwrapper {
+    width: 100% !important;
+    height: 100vh !important;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    transform: inherit;
+    overflow: auto;
+  }
+  .sidebarUiset {
+    height: 100% !important;
+  }
+  .mainBody {
+    overflow: auto;
+    min-height: calc(100%);
+  }
+  .InputBoxForm {
+    width: 100% !important;
+  }
+  .liveCardBlog {
+    width: 100% !important;
+  }
+  .cardFormBlog {
+    display: block !important;
+    margin-top: 0px !important;
+  }
+  .fieldsColumn {
+    margin: 0 auto 60px;
+  }
+  .cardswrapMain {
+    width: 90% !important;
+    margin: 0 auto;
+  }
+  .InputBoxForm::after {
+    width: 100% !important;
+    height: 1px;
+    bottom: 25px !important;
+    left: 0px;
+    right: 0px !important;
+    top: auto;
+  }
 }

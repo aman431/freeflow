@@ -4,15 +4,6 @@ import React, { FC } from "react";
 import { Avatar, Card, Box, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
-  root: {
-    width: "300px",
-    border: "none",
-    background: "rgba(180, 215, 251, 0.5)",
-    boxSizing: "border-box",
-    padding: "10px 5px",
-    marginTop: "-40%",
-    marginBottom: "20px",
-  },
   displaycard: {
     width: "92%",
     boxShadow: "2px 3px 16px 3px #333",
@@ -50,7 +41,17 @@ const Livecard: FC<IProps> = ({ Picture, ImgData, colorHexCode, state }) => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.root}>
+    <Box
+      className="cardswrapMain"
+      style={{
+        width: "70%",
+        border: "none",
+        background: "rgba(180, 215, 251, 0.5)",
+        boxSizing: "border-box",
+        padding: "10px 5px",
+        marginBottom: "20px",
+      }}
+    >
       {/* Card */}
       <Card
         className={classes.displaycard}
@@ -68,7 +69,7 @@ const Livecard: FC<IProps> = ({ Picture, ImgData, colorHexCode, state }) => {
         ) : (
           <Avatar
             alt="Remy Sharp"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3gOqG9WdfCMoKW8RRkG6_Fo-H9ZGTYyl_1A&usqp=CAU"
+            src="https://www.freeiconspng.com/thumbs/face-icon-png/flat-face-icon-23.png"
             className={classes.cardAvatar}
           />
         )}

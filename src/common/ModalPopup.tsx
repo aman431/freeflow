@@ -96,7 +96,7 @@ const ModalPopup = ({
     <div>
       <Dialog
         PaperProps={{
-          style: { borderRadius: 12 },
+          style: { borderRadius: 12, width: "calc(50% - 64px)" },
         }}
         open={open}
         onClose={handleClose}

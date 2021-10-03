@@ -11,14 +11,6 @@ import Aftersubmit from "./Aftersubmit";
 import ModalPopup from "../common/ModalPopup";
 
 const useStyles = makeStyles((theme) => ({
-  mainBody: {
-    display: "flex",
-    alignItems: "center",
-    width: "100%",
-    marginTop: "20%",
-    padding: "0px 35px",
-    boxSizing: "border-box",
-  },
   border: {
     height: "90%",
     width: "1px",
@@ -46,7 +38,7 @@ function Body() {
   const [state, setState] = useState(initialState);
   const [Picture, setPicture] = useState();
   const [ImgData, setImgData] = useState();
-  const [colorHexCode, setColorHexCode] = useState("#000000");
+  const [colorHexCode, setColorHexCode] = useState("#6F6EE8");
   const [showModalList, openModal] = useState<any>({});
 
   // update state on change
@@ -95,7 +87,17 @@ function Body() {
   const onSubmit = <Aftersubmit />;
 
   return (
-    <div className={classes.mainBody}>
+    <div
+      className="cardFormBlog"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        width: "100%",
+        marginTop: "20%",
+        padding: "0px 35px",
+        boxSizing: "border-box",
+      }}
+    >
       {showModalList.openModalpopup && (
         <ModalPopup
           modalTitle="Live Card"
@@ -117,7 +119,7 @@ function Body() {
         />
       </div>
       <div className={classes.border}></div>
-      <div>
+      <div className="liveCardBlog">
         {/* live card */}
         <Livecard
           state={state}
@@ -125,8 +127,6 @@ function Body() {
           ImgData={ImgData}
           colorHexCode={colorHexCode}
         />
-        {/* Afer hit to the submit button */}
-        {/* <Aftersubmit /> */}
       </div>
     </div>
   );
