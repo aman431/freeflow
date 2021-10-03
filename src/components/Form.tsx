@@ -136,7 +136,7 @@ const Form: FC<IProps> = ({
       <input
         id="typefile"
         type="file"
-        accept=".ai, .bmp, .gif, .ico, .jpg, .ps, .psd, .svg, .tif, .tiff"
+        accept=".ai, .bmp, .gif, .ico, .jpg, .ps, .psd, .svg, .tif, .tiff" // set restirction for jpeg png
         onChange={handleonchange}
         style={{ display: "none" }}
       />

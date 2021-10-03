@@ -8,6 +8,7 @@ import { AppActions, AppActionType } from "../redux/reducer/appReducer";
 import { useDispatch } from "react-redux";
 import { Dispatch } from "redux";
 import Aftersubmit from "./Aftersubmit";
+import ModalPopup from "../common/ModalPopup";
 
 const useStyles = makeStyles((theme) => ({
   mainBody: {
@@ -46,6 +47,7 @@ function Body() {
   const [Picture, setPicture] = useState();
   const [ImgData, setImgData] = useState();
   const [colorHexCode, setColorHexCode] = useState("#000000");
+  const [showModalList, openModal] = useState<any>({});
 
   // update state on change
   const handleChange = (e: any, fromwhere: string) => {
@@ -72,6 +74,11 @@ function Body() {
       colorpicker: colorHexCode,
     };
 
+    openModal({
+      ...showModalList,
+      openModalpopup: true,
+    });
+
     // dispatch action on reducers with action type
     dispatch({
       type: AppActionType.setusercard,
@@ -79,8 +86,24 @@ function Body() {
     });
   };
 
+  //close Properties Modal
+  const onCloseDetails = () => {
+    openModal({});
+  };
+
+  // after submit file need to render
+  const onSubmit = <Aftersubmit />;
+
   return (
     <div className={classes.mainBody}>
+      {showModalList.openModalpopup && (
+        <ModalPopup
+          modalTitle="Live Card"
+          modalBody={onSubmit}
+          onCloseDetails={onCloseDetails}
+          size="sm"
+        />
+      )}
       <div className="InputBoxForm">
         {/* Show forms */}
         <Form
@@ -103,7 +126,7 @@ function Body() {
           colorHexCode={colorHexCode}
         />
         {/* Afer hit to the submit button */}
-        <Aftersubmit />
+        {/* <Aftersubmit /> */}
       </div>
     </div>
   );

@@ -71,8 +71,12 @@ const Aftersubmit = () => {
             />
           )}
           {/* Show brand name and card name */}
-          <p className={classes.cardname}>Brand Name {userCard.brandname}</p>
-          <p className={classes.namepass}>Card Name {userCard.cardname}</p>
+          <p className={classes.cardname}>
+            {userCard.brandname !== "" ? <>Brand {userCard.brandname}</> : null}
+          </p>
+          <p className={classes.namepass}>
+            {userCard.cardname !== "" ? <>Card {userCard.cardname}</> : null}
+          </p>
           <br />
         </Card>
       )}
